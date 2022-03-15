@@ -4,7 +4,6 @@ body{
 }
 
 .container{
-    background-color: red;
     height: 100vh;
     display: flex;
     flex-direction: row;
@@ -12,19 +11,47 @@ body{
 
 .sidemenu{
     height: 100vh;
-    background-color: blue;
     width: 20vw;
     display: flex;
     flex-direction: column;
+    border-right-style: solid;
 }
 
 .formarea{
     height: 100vh;
     width: 80vw;
-    background-color: green;
     display: flex;
     flex-direction: column;
     text-align: center;
+
+}
+
+#formDiv{
+    margin-top: 15px;
+    align-self: center;
+}
+
+.testar{
+    display: inline-block;
+}
+
+input, label{
+    display:block;
+}
+
+input[type=text]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+label{
+    margin-right: 90%;
+    font-size: 22px;
 }
 
 .sidemenu button{

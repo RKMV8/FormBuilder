@@ -18,13 +18,20 @@ function addField() {
     var ID = document.createElement("input");
     ID.setAttribute("type", "text");
     ID.setAttribute("name", "emailID");
-    ID.setAttribute("placeholder", "E-Mail ID");
 
+    //create label
+    var y = document.createElement("label");
+    y.innerHTML = document.getElementById('field').value;
 
+    form.append(y);
     form.append(ID);
 
+    var div = document.createElement("formdiv");
+    div.setAttribute("id", "formDiv");
+    div.append(form);
+
     document.getElementsByClassName("formarea")[0]
-               .appendChild(form);
+               .appendChild(div);
 
     // Append the full name input to the form
     
