@@ -18,6 +18,7 @@ function addField() {
     var ID = document.createElement("input");
     ID.setAttribute("type", "text");
     ID.setAttribute("name", "emailID");
+    
 
     //create label
     var y = document.createElement("label");
@@ -35,6 +36,6 @@ function addField() {
 
     // Append the full name input to the form
     
-
+    document.getElementById('field').value = " ";
     document.getElementById("popupForm").style.display = "none";
   }
