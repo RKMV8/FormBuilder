@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>FormBuilder</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidemenu">
+            <button class="addfield" onclick="openForm()">Add field</button>
+            <button class="button2">Add random</button>
+        </div>
+        <div class="formarea">
+            <div class="title" contenteditable="true">
+                <h1>Insert title here</h1> 
+            </div>
+            <div class="AddFieldPopup">
+                <div class="formPopup" id="popupForm">
+                    <form action="/action_page.php" class="formContainer">
+                        <h2>Please enter the field name</h2>
+                        <label for="field">
+                            <strong>Field</strong>
+                        </label>
+                        <input type="text" id="field" placeholder="Your field name" name="field" required>
+                        <button type="button" class="btn" onclick="addField()">Add field</button>
+                        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                    </form>
+                </div>
+            </div>
+            <p id="field1">test</p>
+        </div>
+</body>
+
+</html>
