@@ -16,10 +16,18 @@
         <div class="sidemenu">
             <button class="addfield" onclick="openForm()">Add field</button>
             <button class="button2">Add random</button>
+            <div class="adjustmentdiv">
+                <input type="color" onchange="backgroundColorPicker()" id="background" name="background" value="#DCDBDB">
+                <label for="background">Background</label>
+            </div>
+            <div class="adjustmentdiv">
+                <input type="color" onchange="textColorPicker()" id="formText" name="formText" value="#DCDBDB">
+                <label for="formText">Text</label>
+            </div>
             <button class="printbutton" onclick="window.print()">Print</button>
         </div>
         <div class="formarea">
-            <div class="title" contenteditable="true">
+            <div class="title" spellcheck="false" contenteditable="true">
                 <h1>Click here to change this title</h1> 
             </div>
             <div class="AddFieldPopup">

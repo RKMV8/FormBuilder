@@ -6,6 +6,21 @@ function closeForm() {
     document.getElementById("popupForm").style.display = "none";
   }
 
+function backgroundColorPicker() {
+    var x = document.getElementById("background").value;
+    document.getElementsByClassName("formarea")[0].style.backgroundColor = x;
+
+}
+
+function textColorPicker() {
+  var x = document.getElementById("formText").value;
+  document.querySelectorAll('#inputLabel, h1').forEach(element => element.style.color =x);
+
+
+}
+
+
+
 function addField() {
 
     // Create a form dynamically
@@ -22,7 +37,7 @@ function addField() {
     //create label
     var y = document.createElement("label");
     y.innerHTML = document.getElementById('field').value;
-    console.log(y.innerHTML);
+    y.setAttribute("id", "inputLabel");
 
     form.append(y);
     form.append(ID);
@@ -48,5 +63,4 @@ function addMultiSelect(){
 function validateFormOnSubmit() {
   addField();
 }
-
 
