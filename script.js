@@ -1,10 +1,10 @@
 function openForm() {
     document.getElementById("popupForm").style.display = "block";
+    document.getElementById("field").focus();
   }
 function closeForm() {
     document.getElementById("popupForm").style.display = "none";
   }
-
 
 function addField() {
 
@@ -30,6 +30,7 @@ function addField() {
     var div = document.createElement("formdiv");
     div.setAttribute("id", "formDiv");
     div.append(form);
+
 
     document.getElementsByClassName("formarea")[0]
                .appendChild(div);
