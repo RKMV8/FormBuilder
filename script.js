@@ -44,4 +44,8 @@ function addMultiSelect(){
 
 }
 
+function validateFormOnSubmit() {
+  addField();
+}
+
 
