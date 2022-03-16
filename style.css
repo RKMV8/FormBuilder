@@ -3,6 +3,7 @@
 body{
     padding: 0;
     margin: 0;
+    -webkit-print-color-adjust: exact;
 }
 
 [contenteditable] {
@@ -117,7 +118,6 @@ i{
     display: flex;
     flex-direction: column;
     background-color: #DCDBDB;
-
 }
 
 .formarea h1{

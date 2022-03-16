@@ -24,6 +24,20 @@
                 <input type="color" onchange="textColorPicker()" id="formText" name="formText" value="#DCDBDB">
                 <label for="formText">Text</label>
             </div>
+            <div class="adjustmentdiv">
+                <label for="input-font">Font</label>
+                <select id="input-font" class="input"
+                    onchange="changeFontStyle(this);">
+                    <option value="Times New Roman" 
+                        selected="selected">
+                        Times New Roman
+                    </option>
+                    <option value="Arial">Arial</option>
+                    <option value="fantasy">Fantasy</option>
+                    <option value="Montserrat">Montserrat</option>
+                </select>
+                
+            </div>
             <button class="printbutton" onclick="window.print()">Print</button>
         </div>
         <div class="formarea">

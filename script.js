@@ -19,6 +19,11 @@ function textColorPicker() {
 
 }
 
+function changeFontStyle(font){
+document.querySelectorAll('#inputLabel, h1').forEach(element => element.style.fontFamily = font.value);
+}
+
+
 
 
 function addField() {
@@ -45,6 +50,7 @@ function addField() {
     var div = document.createElement("formdiv");
     div.setAttribute("id", "formDiv");
     div.append(form);
+
 
 
     document.getElementsByClassName("formarea")[0]
