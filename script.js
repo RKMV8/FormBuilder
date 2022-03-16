@@ -7,7 +7,6 @@ function closeForm() {
 
 
 function addField() {
-    console.log("hej");
 
     // Create a form dynamically
     var form = document.createElement("form");
@@ -39,3 +38,10 @@ function addField() {
     document.getElementById('field').value = " ";
     document.getElementById("popupForm").style.display = "none";
   }
+
+function addMultiSelect(){
+
+}
+
+
+
