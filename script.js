@@ -22,6 +22,7 @@ function addField() {
     //create label
     var y = document.createElement("label");
     y.innerHTML = document.getElementById('field').value;
+    console.log(y.innerHTML);
 
     form.append(y);
     form.append(ID);
@@ -42,6 +43,5 @@ function addField() {
 function addMultiSelect(){
 
 }
-
 
 
