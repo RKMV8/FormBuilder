@@ -1,10 +1,4 @@
-function openForm() {
-    document.getElementById("popupForm").style.display = "block";
-    document.getElementById("field").focus();
-  }
-function closeForm() {
-    document.getElementById("popupForm").style.display = "none";
-  }
+
 
 function backgroundColorPicker() {
     var x = document.getElementById("background").value;
@@ -30,10 +24,11 @@ function addField() {
 
     var ID = document.createElement("input");
     ID.setAttribute("type", "text");
-    ID.setAttribute("name", "emailID");
+    ID.setAttribute("name", "inputid");
     
     var y = document.createElement("label");
     y.innerHTML = document.getElementById('field').value;
+    console.log(y.innerHTML);
     y.setAttribute("class", "inputClassLabel")
 
     form.append(y);
@@ -45,23 +40,19 @@ function addField() {
     div.setAttribute("draggable", "true");
     div.setAttribute("ondragstart", "onDragStart(event);");
     div.append(form);
-    divCount++;
-
-    document.getElementsByClassName("contentformarea")[0]
-               .appendChild(div);
-
     
-    document.getElementById('field').value = " ";
+    document.getElementsByClassName("contentformarea")[0].appendChild(div);
+
+    document.getElementById('field').value = '';
     document.getElementById("popupForm").style.display = "none";
+    divCount++;
   }
 
 function addMultiSelect(){
 
 }
 
-function validateFormOnSubmit() {
-  addField();
-}
+
 
 function onDragStart(event) {
   event
@@ -93,5 +84,11 @@ function onDrop(event) {
 }
 
 
-
+function openForm() {
+  document.getElementById("popupForm").style.display = "block";
+  document.getElementById("field").focus();
+}
+function closeForm() {
+  document.getElementById("popupForm").style.display = "none";
+}
 
