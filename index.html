@@ -17,7 +17,8 @@
             <button class="addfield" onclick="openForm()">Add field</button>
             <button class="button2">Add random</button>
             <div class="adjustmentdiv">
-                <input type="color" onchange="backgroundColorPicker()" id="background" name="background" value="#DCDBDB">
+                <input type="color" onchange="backgroundColorPicker()" id="background" name="background"
+                    value="#DCDBDB">
                 <label for="background">Background</label>
             </div>
             <div class="adjustmentdiv">
@@ -26,23 +27,22 @@
             </div>
             <div class="adjustmentdiv">
                 <label for="input-font">Font</label>
-                <select id="input-font" class="input"
-                    onchange="changeFontStyle(this);">
-                    <option value="Times New Roman" 
-                        selected="selected">
-                        Times New Roman
-                    </option>
+                <select id="input-font" class="input" onchange="changeFontStyle(this);">
+                    <option value="Times New Roman">Times New Roman</option>
                     <option value="Arial">Arial</option>
                     <option value="fantasy">Fantasy</option>
-                    <option value="Montserrat">Montserrat</option>
+                    <option value="Montserrat" selected="selected">Montserrat</option>
                 </select>
-                
+
             </div>
             <button class="printbutton" onclick="window.print()">Print</button>
         </div>
         <div class="formarea">
             <div class="title" spellcheck="false" contenteditable="true">
-                <h1>Click here to change this title</h1> 
+                <h1>Click here to change this title</h1>
+            </div>
+            <div class="contentformarea" ondragover="onDragOver(event);" ondrop="onDrop(event);">
+                <!-- User created content goes here -->
             </div>
             <div class="AddFieldPopup">
                 <div class="formPopup" id="popupForm">

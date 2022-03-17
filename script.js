@@ -9,23 +9,20 @@ function closeForm() {
 function backgroundColorPicker() {
     var x = document.getElementById("background").value;
     document.getElementsByClassName("formarea")[0].style.backgroundColor = x;
-
 }
 
 function textColorPicker() {
   var x = document.getElementById("formText").value;
-  document.querySelectorAll('#inputLabel, h1').forEach(element => element.style.color =x);
-
-
+  document.querySelectorAll('.inputClassLabel, h1').forEach(element => element.style.color =x);
 }
 
 function changeFontStyle(font){
-document.querySelectorAll('#inputLabel, h1').forEach(element => element.style.fontFamily = font.value);
+document.querySelectorAll('.inputClassLabel, h1').forEach(element => element.style.fontFamily = font.value);
 }
 
 
-
-
+var fieldCount = 1;
+var divCount = 1;
 function addField() {
 
     // Create a form dynamically
@@ -38,22 +35,25 @@ function addField() {
     ID.setAttribute("type", "text");
     ID.setAttribute("name", "emailID");
     
-
     //create label
     var y = document.createElement("label");
     y.innerHTML = document.getElementById('field').value;
-    y.setAttribute("id", "inputLabel");
+    y.setAttribute("class", "inputClassLabel")
+    y.setAttribute("id", `"inputLabel${fieldCount}"`);
+    fieldCount++;
 
     form.append(y);
     form.append(ID);
 
     var div = document.createElement("formdiv");
-    div.setAttribute("id", "formDiv");
+    div.setAttribute("class", "formDiv");
+    div.setAttribute("id", `"formDiv${divCount}"`);
+    div.setAttribute("draggable", "true");
+    div.setAttribute("ondragstart", "onDragStart(event);");
     div.append(form);
+    divCount++;
 
-
-
-    document.getElementsByClassName("formarea")[0]
+    document.getElementsByClassName("contentformarea")[0]
                .appendChild(div);
 
     // Append the full name input to the form
@@ -70,3 +70,32 @@ function validateFormOnSubmit() {
   addField();
 }
 
+function onDragStart(event) {
+  event
+    .dataTransfer
+    .setData('text/plain', event.target.id);
+}
+
+function onDragOver(event) {
+  event.preventDefault();
+}
+
+function onDrop(event) {
+  const id = event
+    .dataTransfer
+    .getData('text');
+    const draggableElement = document.getElementById(id);
+    const dropzone = event.target;
+    console.log(event.target.tagName)
+
+    if (event.target.tagName == 'FORM' || event.target.tagName == 'INPUT' || event.target.tagName == 'LABEL' || event.target.tagName == 'H1' || event.target.tagName == 'FORMDIV') {
+      console.log("Not a draggable area")
+    }
+    else {
+      dropzone.appendChild(draggableElement);
+        event
+        .dataTransfer
+        .clearData();
+    }
+    
+}

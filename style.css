@@ -112,6 +112,21 @@ i{
   }
 }
 
+.contentformarea{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 200px;
+}
+
+.contentformarea{
+  text-align: center;
+}
+
+.contentformarea label{
+  text-align: left;
+}
+
 .formarea{
     height: 100vh;
     width: 80vw;
@@ -128,10 +143,15 @@ i{
   text-align: left;
 }
 
-#formDiv{
+.formDiv{
     margin-top: 15px;
     align-self: center;
     width: 400px;
+    padding: 15px;
+}
+
+.formDiv:hover{
+  border-style:dotted;
 }
 
 input, label{
