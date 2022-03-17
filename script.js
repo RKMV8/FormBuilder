@@ -98,3 +98,11 @@ document.getElementById('field')
             document.querySelector('.btn').click();
         }
     });
+
+    document.getElementById('field')
+    .addEventListener('keyup', function(event) {
+        if (event.code === 'Escape')
+        {
+          closeForm();
+        }
+    });
