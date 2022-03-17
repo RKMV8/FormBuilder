@@ -1,5 +1,3 @@
-
-
 function backgroundColorPicker() {
     var x = document.getElementById("background").value;
     document.getElementsByClassName("formarea")[0].style.backgroundColor = x;
@@ -14,7 +12,6 @@ function changeFontStyle(font){
 document.querySelectorAll('.inputClassLabel, h1').forEach(element => element.style.fontFamily = font.value);
 }
 
-
 var divCount = 1;
 function addField() {
 
@@ -24,7 +21,8 @@ function addField() {
 
     var ID = document.createElement("input");
     ID.setAttribute("type", "text");
-    ID.setAttribute("name", "inputid");
+    ID.setAttribute("name", "emailID");
+    ID.setAttribute("id", "tempinput")
     
     var y = document.createElement("label");
     y.innerHTML = document.getElementById('field').value;
@@ -92,3 +90,11 @@ function closeForm() {
   document.getElementById("popupForm").style.display = "none";
 }
 
+document.getElementById('field')
+    .addEventListener('keyup', function(event) {
+        if (event.code === 'Enter')
+        {
+            event.preventDefault();
+            document.querySelector('.btn').click();
+        }
+    });
