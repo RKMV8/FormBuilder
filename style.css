@@ -6,6 +6,15 @@ body{
     -webkit-print-color-adjust: exact;
 }
 
+hr{
+  width: 100%;
+}
+
+.componentpanel{
+    display: flex;
+    flex-direction: column;
+}
+
 [contenteditable] {
   outline: 0px solid transparent;
 }
@@ -16,8 +25,13 @@ body{
     flex-direction: row;
 }
 
-h1, label, h1 i{
+h1, label, h1 i, h3{
   font-family: 'Montserrat', sans-serif;
+}
+
+h3{
+  font-size: 23px;
+  font-weight: 900;
 }
 
 i{
@@ -26,10 +40,22 @@ i{
 
 .adjustmentdiv{
   display: flex;
+  flex-direction: column;
   margin-top: 20px;
-  text-align: center;
+  text-align: left;
   justify-content: left;
-  margin-left: 75px;
+}
+
+.adjustmentdiv input, .input{
+  margin: 10px;
+}
+
+.colorpanel{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-width: 1px;
+  margin: 5px 50px 5px 50px;
 }
 
 .addfield, .button2{
@@ -53,6 +79,10 @@ i{
         color: #fff;
         background-color: #0b5ed7;
         border-color: #0a58ca;
+}
+
+.button2{
+  margin-bottom: 30px;
 }
 
 .printbutton{
@@ -91,6 +121,8 @@ i{
     display: flex;
     flex-direction: column;
     border-right-style: solid;
+    background-color: #A7A29E;
+    text-align: center;
 }
 
 @page {
@@ -103,24 +135,16 @@ i{
     display: none;
   }
 
-  .container{
-    margin-left: 80px;
-  }
-
   @page :footer, :header {
     display: none
   }
 }
 
 .contentformarea{
-  text-align: center;
+
   display: flex;
   flex-direction: column;
   padding-bottom: 200px;
-}
-
-.contentformarea{
-  text-align: center;
 }
 
 .contentformarea label{
@@ -129,10 +153,10 @@ i{
 
 .formarea{
     height: 100vh;
-    width: 80vw;
+    width: 100vw;
     display: flex;
     flex-direction: column;
-    background-color: #DCDBDB;
+    background-color: #FFF4ED;
 }
 
 .formarea h1{
@@ -167,6 +191,16 @@ input[type=text]{
     border-radius: 4px;
     box-sizing: border-box;
   }
+
+input[type=color]{
+    width: 50%;
+   
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
 
 label{
     text-align: left;
@@ -243,5 +277,8 @@ label{
     opacity: 1;
   }
 
-
-  
+  @media only screen and (max-width: 715px) {
+    .sidemenu{
+      width: 40vw;
+    }
+  }

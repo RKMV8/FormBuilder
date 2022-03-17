@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>FormBuilder</title>
 </head>
-
 <body>
     <div class="container">
         <div class="sidemenu">
+            <h3>Add components</h3>
+            <div class="componentpanel">
             <button class="addfield" onclick="openForm()">Add field</button>
             <button class="button2">Add random</button>
+            </div>
+            <hr>
+            <div class="colorpanel">
+                <h3>Change colour and font</h3>
             <div class="adjustmentdiv">
-                <input type="color" onchange="backgroundColorPicker()" id="background" name="background"
-                    value="#DCDBDB">
                 <label for="background">Background</label>
+                <input type="color" onchange="backgroundColorPicker()" id="background" name="background" value="#DCDBDB">
             </div>
             <div class="adjustmentdiv">
-                <input type="color" onchange="textColorPicker()" id="formText" name="formText" value="#DCDBDB">
                 <label for="formText">Text</label>
+                <input type="color" onchange="textColorPicker()" id="formText" name="formText" value="#404040">
             </div>
             <div class="adjustmentdiv">
                 <label for="input-font">Font</label>
@@ -33,8 +35,8 @@
                     <option value="fantasy">Fantasy</option>
                     <option value="Montserrat" selected="selected">Montserrat</option>
                 </select>
-
             </div>
+        </div>
             <button class="printbutton" onclick="window.print()">Print</button>
         </div>
         <div class="formarea">

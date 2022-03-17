@@ -21,33 +21,27 @@ document.querySelectorAll('.inputClassLabel, h1').forEach(element => element.sty
 }
 
 
-var fieldCount = 1;
 var divCount = 1;
 function addField() {
 
-    // Create a form dynamically
     var form = document.createElement("form");
     form.setAttribute("method", "post");
     form.setAttribute("action", "submit.php");
 
-    // Create an input element for emailID
     var ID = document.createElement("input");
     ID.setAttribute("type", "text");
     ID.setAttribute("name", "emailID");
     
-    //create label
     var y = document.createElement("label");
     y.innerHTML = document.getElementById('field').value;
     y.setAttribute("class", "inputClassLabel")
-    y.setAttribute("id", `"inputLabel${fieldCount}"`);
-    fieldCount++;
 
     form.append(y);
     form.append(ID);
 
     var div = document.createElement("formdiv");
     div.setAttribute("class", "formDiv");
-    div.setAttribute("id", `"formDiv${divCount}"`);
+    div.setAttribute("id", `formDiv${divCount}`);
     div.setAttribute("draggable", "true");
     div.setAttribute("ondragstart", "onDragStart(event);");
     div.append(form);
@@ -56,7 +50,6 @@ function addField() {
     document.getElementsByClassName("contentformarea")[0]
                .appendChild(div);
 
-    // Append the full name input to the form
     
     document.getElementById('field').value = " ";
     document.getElementById("popupForm").style.display = "none";
@@ -96,6 +89,9 @@ function onDrop(event) {
         event
         .dataTransfer
         .clearData();
-    }
-    
+    } 
 }
+
+
+
+
