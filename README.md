@@ -10,6 +10,8 @@ Detta är ett pågående projekt tidigt i utvecklingsskedet, följande epics fin
 - Snygga upp sidan och bättra på UX överlag.
 
 
+Demo: https://rkmv8.github.io/FormBuilder/
+
 **GIF över funktioner**
 
 ![GIF](https://i.imgur.com/NvOlzUq.gif)
