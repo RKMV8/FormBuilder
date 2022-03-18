@@ -58,6 +58,11 @@ i{
   margin: 5px 50px 5px 50px;
 }
 
+#multiSelectDiv{
+  text-align: center;
+  
+}
+
 .addfield, .button2{
     cursor: pointer;
     outline: 0;
@@ -213,6 +218,8 @@ label{
     margin-right: 20%;
 }
 
+
+
 * {
     box-sizing: border-box;
   }
@@ -259,7 +266,7 @@ label{
     background-color: #ddd;
     outline: none;
   }
-  .formContainer .btn {
+  .formContainer .btn, .formContainer .btnMulti {
     padding: 12px 20px;
     border: none;
     background-color: #8ebf42;
@@ -272,7 +279,7 @@ label{
   .formContainer .cancel {
     background-color: #cc0000;
   }
-  .formContainer .btn:hover,
+  .formContainer .btn:hover, .formContainer .btnMulti:hover,
   .openButton:hover {
     opacity: 1;
   }

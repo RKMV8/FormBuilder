@@ -22,12 +22,12 @@ function addField() {
     var ID = document.createElement("input");
     ID.setAttribute("type", "text");
     ID.setAttribute("name", "emailID");
-    ID.setAttribute("id", "tempinput")
+    ID.setAttribute("id", "tempinput");
     
     var y = document.createElement("label");
     y.innerHTML = document.getElementById('field').value;
     console.log(y.innerHTML);
-    y.setAttribute("class", "inputClassLabel")
+    y.setAttribute("class", "inputClassLabel");
 
     form.append(y);
     form.append(ID);
@@ -48,8 +48,24 @@ function addField() {
 
 function addMultiSelect(){
 
-}
+  var multiSelectDiv = document.createElement("div");
+  multiSelectDiv.setAttribute("id", "multiSelectDiv");
 
+  var multiSelect = document.createElement("input")
+  multiSelect.setAttribute("type", "checkbox");
+  multiSelect.setAttribute("name", "test2");
+
+  var multiSelectLabel = document.createElement("label");
+  multiSelectLabel.innerHTML = document.getElementById('fieldMulti').value;
+
+  multiSelectDiv.append(multiSelect);
+  multiSelectDiv.append(multiSelectLabel);
+
+  document.getElementsByClassName("contentformarea")[0].appendChild(multiSelectDiv);
+
+  document.getElementById('fieldMulti').value = '';
+  document.getElementById("popupFormMultiselect").style.display = "none";
+}
 
 
 function onDragStart(event) {
@@ -90,6 +106,14 @@ function closeForm() {
   document.getElementById("popupForm").style.display = "none";
 }
 
+function openFormMulti() {
+  document.getElementById("popupFormMultiselect").style.display = "block";
+  document.getElementById("fieldMulti").focus();
+}
+function closeFormMulti() {
+  document.getElementById("popupFormMultiselect").style.display = "none";
+}
+
 document.getElementById('field')
     .addEventListener('keyup', function(event) {
         if (event.code === 'Enter')
@@ -104,5 +128,22 @@ document.getElementById('field')
         if (event.code === 'Escape')
         {
           closeForm();
+        }
+    });
+
+    document.getElementById('fieldMulti')
+    .addEventListener('keyup', function(event) {
+        if (event.code === 'Enter')
+        {
+            event.preventDefault();
+            document.querySelector('.btnMulti').click();
+        }
+    });
+
+    document.getElementById('fieldMulti')
+    .addEventListener('keyup', function(event) {
+        if (event.code === 'Escape')
+        {
+          closeFormMulti()
         }
     });

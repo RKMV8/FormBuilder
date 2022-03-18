@@ -14,7 +14,7 @@
             <h3>Add components</h3>
             <div class="componentpanel">
             <button class="addfield" onclick="openForm()">Add field</button>
-            <button class="button2">Add random</button>
+            <button class="button2" onclick="openFormMulti()">Add checkbox</button>
             </div>
             <hr>
             <div class="colorpanel">
@@ -56,6 +56,19 @@
                         <input type="text" id="field" placeholder="Your field name" name="field" required>
                         <button type="button" class="btn" onclick="addField()">Add field</button>
                         <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                    </div>
+                </div>
+            </div>
+            <div class="AddMultiselectPopup">
+                <div class="formPopup" id="popupFormMultiselect">
+                    <div onsubmit="addMultiSelect()" class="formContainer">
+                        <h2>Please enter the checkbox text</h2>
+                        <label for="field">
+                            <strong>Checkbox text</strong>
+                        </label>
+                        <input type="text" id="fieldMulti" placeholder="Your field name" name="field" required>
+                        <button type="button" class="btnMulti" onclick="addMultiSelect()">Add checkbox</button>
+                        <button type="button" class="btn cancel" onclick="closeFormMulti()">Close</button>
                     </div>
                 </div>
             </div>
